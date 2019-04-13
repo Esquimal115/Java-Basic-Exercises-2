@@ -7,18 +7,25 @@ public class Simulador {
     public static void main(String[] args) {
 
         for(int i = 0; i<5; i++){
+            System.out.println("\n==================================");
+            System.out.println("Partida " + (i+1));
             System.out.println("==================================");
 
             jugador1 = new Jugador();
-            cpu = new Jugador();
-            jugador1.jugar();
-            cpu.jugar();
+            jugador2 = new Jugador();
 
-            jugador1.consultarJugada();
+            jugador1.jugar();
+            String jug1 = jugador1.consultarJugada();
+            System.out.println("Jugador 1: " + jug1);
             jugador1.imprimirJugada();
-            cpu.consultarJugadaAleatoria();
-            cpu.imprimirJugadaAleatoria();
+
+            jugador2.jugar();
+            String jug2 = jugador2.consultarJugada();
+            System.out.println("Jugador 2: " + jug2);
+            jugador2.imprimirJugada();
             System.out.println();
+
+
             resultado();
 
         }

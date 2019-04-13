@@ -3,17 +3,18 @@ package Ejercicio8;
 public class Jugador {
 
     private static Jugada jugada1;
-    private static Jugada jugadaAleatoria;
     private String j1;
-    private String al1;
+
+    public String getJ1 (){
+        return this.j1;
+    }
+
 
     public void jugar (){
 
-        jugada1 = jugada1.generarJugada();
-        jugadaAleatoria =  jugadaAleatoria.generarJugada();
+        jugada1 = Jugada.generarJugada();
 
     }
-
 
     public String consultarJugada (){
 
@@ -22,18 +23,9 @@ public class Jugador {
 
     }
 
-    public String consultarJugadaAleatoria (){
-        al1 = jugadaAleatoria.getTipoJugada();
-        return al1;
+    public String imprimirJugada (){
+
+        return j1;
     }
 
-    public  void imprimirJugada (){
-
-        System.out.println("Jugador 1: " + j1);
-    }
-
-    public void imprimirJugadaAleatoria (){
-
-        System.out.println("Jugador 2: " + al1);
-    }
 }

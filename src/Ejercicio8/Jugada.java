@@ -7,11 +7,6 @@ public class Jugada {
     private String papel;
     private String tijeras;
 
-    private String piedraCPU;
-    private String papelCPU;
-    private String tijerasCPU;
-
-
     public Jugada (String jugada){
 
         if (jugada.equalsIgnoreCase("piedra")){
